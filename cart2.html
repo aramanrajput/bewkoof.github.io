@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        background-color: whitesmoke;
+    }
+    #container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        height: 700px;
+        width: 900px;
+        margin: 10px auto;
+       
+    }
+    img{
+        width: 60%;
+    }
+    #box{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+</style>
+</head>
+<body> 
+    <input id="input" type="text" placeholder="promo code">
+    
+ <button id="submit">Apply Promo</button>
+ <a href="sucess.html"><button>Checkout</button></a>
+     <div id="box"></div>
+    <div id="container"></div> 
+   
+  
+    
+</body>
+<script>
+     let container = document.getElementById("container")
+    
+     let box = document.getElementById("box");
+     let input = document.getElementById("input")
+     let submit = document.getElementById("submit")
+   
+
+     
+     
+var cart = JSON.parse(localStorage.getItem("cart"))
+console.log(cart)
+var output = 0;
+var count =0;
+    
+    cart.forEach(function(products){
+        box.innerHTML=null
+        count++
+        let name = products.name
+      
+        let price = Number(products.price)
+        let image = products.image
+
+        let div = document.createElement("div");
+        let div2 =document.createElement("div");
+
+        
+       
+let img = document.createElement("img");
+
+img.src = image;
+
+let product_price = document.createElement("p");
+product_price.textContent = Number(price);
+
+ output = output + price ;
+ let total_price = document.createElement("h1")
+total_price.textContent = "Total price : " +output
+
+let total_products = document.createElement("h1")
+total_products.textContent = "Total items : "+count;
+
+submit.addEventListener("click",promo)
+function promo (){
+if(input.value == "masai30"){
+
+  total_price.textContent = "price after discount : " + (output -output*30/100)        
+}
+else{
+    
+    total_price.textContent= "Total price : " + output
+}
+}
+
+
+let product_name = document.createElement("p");
+product_name.textContent=name;
+
+let addtocart_btn = document.createElement("button")
+addtocart_btn.innerText="Add to cart"
+var c =0;
+addtocart_btn.onclick = function(){
+    c++
+    
+   if(c>1){
+       alert("you have already added this product")
+
+   }
+   else{
+      addtocart(products) 
+   }
+
+}
+div2.append(total_products,total_price)
+box.append(div2)
+div.append(img,product_name,product_price,addtocart_btn);
+
+container.append(div)
+
+
+    })
+    
+  
+
+
+
+</script>
+</html>
