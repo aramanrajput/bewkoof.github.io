@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+         body{
+           background-color: cornsilk;
+       }
+        input{
+            height: 60px;
+            width: 250px;
+        }
+        #box{
+            height: 400px;
+            width: 500px;
+            margin: 100px auto;
+            
+        }
+        label{
+            font-size: 40px
+        }
+    
+form {
+    height: 500px;
+    padding: 119px;
+    background-color: cadetblue;
+    border: 5px solid darkslategrey;
+}
+button {
+    height: 71px;
+    width: 135px;
+    font-size: 20px;
+    margin: 60px;
+    
+}
+.navbar{
+            background-color: cadetblue;
+            border-radius: 30px;
+          }
+        .navbar li{
+            
+            list-style: none; 
+            margin: 13px 20px;
+            width: 80px;
+        }
+      
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: rgb(211, 211, 211);
+           
+        }
+        .logo{
+            color: blue;
+            font-size: large;
+        }
+        .nav{
+            margin: auto;
+        }
+
+
+        
+    
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav">
+          <ul>
+              
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="login.html" >Login</a></li>
+            <li><a href="signup.html" >Signup</a></li>
+        </ul>
+  
+      </div>
+       </nav> 
+      <div id="box">
+
+
+
+        
+<form onsubmit="signup(event)" id="myform">
+      <label for="">Name</label>
+      <br>
+      <input id="name" type="text"  placeholder="type  your name " />
+      <br />
+      <label for="">Email</label>
+      <br>
+      <input id="email" type="email"  placeholder="type your email " />
+      <br />
+      <label for="">Password</label>
+      <br>
+      <input id="password" type="password" placeholder="type your password " />
+      <div>
+        <button>Sign up</button>
+      </div>
+      
+    </form>
+
+
+
+
+    
+      </div>
+    
+  </body>
+</html>
+
+<script>
+  function signup(e) {
+    e.preventDefault();
+    let myform = document.getElementById("myform");
+   let name = myform.name.value;
+    let email = myform.email.value;
+    let password = myform.password.value;
+     
+    if(localStorage.getItem("users")===null){
+      localStorage.setItem("users",JSON.stringify([]));
+    }
+
+let user = {
+   name,
+  email,
+  password
+}
+
+let arr = JSON.parse(localStorage.getItem("users"));
+if(name.length>0&&email.length>0&&password.length>0){
+ arr.push(user);
+
+localStorage.setItem("users",JSON.stringify(arr));   
+}
+
+
+  }
+</script>
