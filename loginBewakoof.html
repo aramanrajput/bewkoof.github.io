@@ -103,23 +103,98 @@ span{
 }
 #box{
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 45% 45%;
     grid-gap:1%;
     justify-content: center;
+    font-family: montserrat,sans-serif;
 
 }
-#box>:nth-child(1){
-    widht:100%;
+
+.b1{
+    
     height: inherit;
 }
 .b2{
+    
+    height: inherit;
+    display: grid;
+    grid-template-rows: inherit;
     text-align: center;
     
+    
 }
-#web_email_login{
+.soc{
+    display: grid;
+    grid-template-rows: inherit;
+    grid-gap:1%;
+    margin-top: 1%;
+}
+.form-body{
+
+    text-align: center;
+}
+.line{
+    display: grid;
+    grid-template-rows: 20% 35% 35%;
+    grid-gap:3%;
+
+}
+@media screen and (min-width: 769px)
+.loginSubmit {
+    height: 60px;
+    font-size: 20px;
+}
+
+#loginSubmit {
+    width: auto;
     justify-content: center;
-    align-items: center;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    letter-spacing: .5px;
+    background: #fff;
+    font-size: 16px;
+    font-family: montserrat,sans-serif;
+    border-radius: 5.8px;
+    border: 1px solid #aeaeae;
+    text-transform: uppercase;
 }
+#continue {
+    width: auto;
+    justify-content: center;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    letter-spacing: .5px;
+    background-color: #42a2a2;
+    font-size: 16px;
+    font-family: montserrat,sans-serif;
+    align-items: center;
+    text-transform: uppercase;
+}
+button, input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button, html input[type=button], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button, select {
+    text-transform: none;
+}
+button {
+    overflow: visible;
+}
+button, input {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
 </style>
 <body>
     <header>
@@ -168,38 +243,51 @@ span{
         </div>
 
 
-        <div class="b2">
-            <h1>Log in / Sign up</h1>
-            <p class="login-text">for Latest trends, exciting offers and everything Bewakoof!</p>
-            <div class="form-body">
+     <div class="b2">
+        <div>
+        <h1>Log in / Sign up</h1>
+        </div>
+
+        <div>
+        <p class="login-text">for Latest trends, exciting offers and everything Bewakoof!</p>
+        </div>
+        
+        <div class="form-body">
                 <form name="loginForm" novalidate="" autocomplete="off">
+
                 <label for="mobile_number">+91</label>
                 <input class="error-box" id="mobile_number" type="tel" name="username" placeholder="Enter Mobile Number" maxlength="10" value="">
-                    <div class="msgs">
-                        <p class="error">Mobile Number is required</p>
-                    </div>
-                    </form>
+                
+                 <div class="msgs">
+                    <p class="error">Mobile Number is required</p>
                 </div>
-            
-               <button id="" type="submit" class="">Continue</button>
-                </form>
-               <div class="">
                 
-                 <span class="">OR</span>
+                 </form>
+        </div>
+        <div>
+               <button id="continue" type="submit" class="">Continue</button>
+        </div>
                 
-                   <div class="">
-                    <a href="">
-                        <button id="web_email_login"> <img src="https://images.bewakoof.com/web/carbon-email-1620039620.png"> CONTINUE WITH EMAIL</button>
-                    </a>
-                    <div class="soc">
+        <div class="line">
+                  <div> 
+                      <span class="">OR</span>
+                  </div>
+                
+                    <div id="log">
+                    <a href=""> <button id="loginSubmit"> <img src="https://images.bewakoof.com/web/carbon-email-1620039620.png"> CONTINUE WITH EMAIL</button> </a>
+                    </div>
+                    <div id="id1">
+                    <div>
                         <button id="web_google_login"><img src="https://images.bewakoof.com/web/group-3-2x-1558356035.png"> Google</button>
-                        <button id="web_facebook_login" style="margin-left: 8px;">
-                            <img src="https://images.bewakoof.com/web/bi-facebook2x-1620886445.png"> Facebook</button>
-                            <p class="termsAndConditions">By creating an account or logging in, you agree with Bewakoof’s Terms and Conditions and Privacy Policy.</p>
+                        <button id="web_facebook_login" style="margin-left: 8px;"><img src="https://images.bewakoof.com/web/bi-facebook2x-1620886445.png"> Facebook</button>
                     </div>
-                </div>
-            </div>
+                    <div>
+                        <p class="termsAndConditions">By creating an account or logging in, you agree with Bewakoof’s Terms and Conditions and Privacy Policy.</p>
+                     </div>
+                    </div>
+                
         </div>
     </div>
+</div>
 </body>
 </html>
