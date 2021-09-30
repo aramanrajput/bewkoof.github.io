@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mainhead {
+    width: 100%;
+    background: #fff;
+    height: 52px;
+    line-height: 52px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    position: relative;
+}
+.mainheadrow{
+    max-width: 1170px;
+    margin: 0 auto;
+    
+    display: flex;
+}
+.mainheadrow>div:nth-child(1){
+
+width: 16%;
+
+}
+.mainheadrow>div:nth-child(1)>img{
+       height: 20px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+
+
+}
+
+
+.mainheadrow>div:nth-child(2){
+
+width: 30%;
+margin-left: 100px;
+
+}
+.mainheadrow>div:nth-child(3){
+
+width: 25%;
+display: flex;
+
+
+}
+.mainheadrow>div:nth-child(4){
+
+width: 20%;
+display: flex;
+
+
+}
+.mainheadrow>div:nth-child(3)>form{
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    display: flex;
+    
+}
+.mainheadrow>div:nth-child(3) input{
+   height: 80%;
+   width: 100%;
+   background: #eaeaea;
+   border: none;
+   border-radius: 7px;
+   margin-top: 2px;
+}
+a>i{
+    font-size: 22px;
+    margin-left: 20px;
+    color: rgb(43, 42, 42);
+}
+a{
+    font-size: 15px;
+    margin-left: 5px;
+    color: rgb(58, 55, 55);
+    text-decoration: none;
+}
+.fa, .fas {
+    margin-top: 15px;
+    margin-right: 10px;
+
+}
+span{
+    font-size: 15px;
+    margin-right: 20px;
+    margin-top: 3px;
+    font-family: montserrat,sans-serif;
+    color: black;
+    
+}
+
+.fas, .fa-grip-lines-vertical{
+    margin-top: 10px;
+}
+ .fa-search{
+    margin-top: 15px;
+}
+#box{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-gap:1%;
+    justify-content: center;
+
+}
+#box>:nth-child(1){
+    widht:100%;
+    height: inherit;
+}
+.b2{
+    text-align: center;
+    
+}
+#web_email_login{
+    justify-content: center;
+    align-items: center;
+}
+</style>
+<body>
+    <header>
+          <div class="mainhead">
+           <div class="mainheadrow">
+           <div>
+            <img src="https://images.bewakoof.com/logos/bewakoof-logo-og.png" alt="">
+            </div>
+  
+           <div>
+            <div style="display: inline-block;">
+            <span>MEN</span>
+           
+            <a href="women.html"> <span>WOMEN</span></a>
+            </div>
+            </div>
+            <div>
+       
+            <form action="">
+            <i id="search" class="fas fa-search"></i> 
+            <input class="search2" type="text" placeholder="Search by product, category or collection">
+            <i class="icon"></i>
+           </form>
+           </div>
+           <div>
+            <span><a><i class="fas fa-grip-lines-vertical"></i></a></span>
+            <div><a href="login.html"> <span> Login</span> </a></div>
+        
+           <span><a href="login.html"><i class="far fa-heart"></i></a></span>
+           <span><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></span>
+       
+          </div>
+
+          </div>
+
+          
+        </div>
+
+    </header>
+
+    <div id="box">
+        <div class="b1">
+            
+            <h2>Welcome to the world of Bewakoof!</h2>
+            <img  src="https://images.bewakoof.com/web/group-19-1617704502.png" alt=""/>
+        </div>
+
+
+        <div class="b2">
+            <h1>Log in / Sign up</h1>
+            <p class="login-text">for Latest trends, exciting offers and everything Bewakoof!</p>
+            <div class="form-body">
+                <form name="loginForm" novalidate="" autocomplete="off">
+                <label for="mobile_number">+91</label>
+                <input class="error-box" id="mobile_number" type="tel" name="username" placeholder="Enter Mobile Number" maxlength="10" value="">
+                    <div class="msgs">
+                        <p class="error">Mobile Number is required</p>
+                    </div>
+                    </form>
+                </div>
+            
+               <button id="" type="submit" class="">Continue</button>
+                </form>
+               <div class="">
+                
+                 <span class="">OR</span>
+                
+                   <div class="">
+                    <a href="">
+                        <button id="web_email_login"> <img src="https://images.bewakoof.com/web/carbon-email-1620039620.png"> CONTINUE WITH EMAIL</button>
+                    </a>
+                    <div class="soc">
+                        <button id="web_google_login"><img src="https://images.bewakoof.com/web/group-3-2x-1558356035.png"> Google</button>
+                        <button id="web_facebook_login" style="margin-left: 8px;">
+                            <img src="https://images.bewakoof.com/web/bi-facebook2x-1620886445.png"> Facebook</button>
+                            <p class="termsAndConditions">By creating an account or logging in, you agree with Bewakoof’s Terms and Conditions and Privacy Policy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
