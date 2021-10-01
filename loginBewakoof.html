@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;1,200;1,400;1,500&display=swap" rel="stylesheet">
+
 <style>
+    *{
+        font-family: montserrat,sans-serif;
+    }
     .mainhead {
     width: 100%;
     background: #fff;
@@ -70,6 +74,7 @@ display: flex;
    border-radius: 7px;
    margin-top: 2px;
 }
+
 a>i{
     font-size: 22px;
     margin-left: 20px;
@@ -103,29 +108,139 @@ span{
 }
 #box{
     display: grid;
-    grid-template-columns: 40% 40%;
-    grid-gap:1%;
+    grid-template-columns: 50% 50%;
+   
     justify-content: center;
+   /* border: 2px solid red;*/
+    
 
 }
+.b1{
+    background-image: linear-gradient(
+0deg,#fff4c4,#fff);
+    /*border: 2px solid red;*/
+}
+
+.b1>:nth-child(1){
+    height: 12%;
+}
 #box>:nth-child(1){
-    widht:100%;
+    width:100%;
     height: inherit;
 }
 .b2{
     text-align: center;
+   /* border: 2px solid red;*/
     
+}
+.b2> div:nth-child(1){
+    margin-bottom: 3%;
 }
 #web_email_login{
     justify-content: center;
     align-items: center;
+    text-align: center;
+    width: 100%;
 }
+h1+p{
+color: gray;
+}
+input{
+    width: 300px;
+    height: 50px;
+    }
+    button{
+        width: 200px;
+        height: 50px;
+        font-size: 14px;
+        color: grey;
+        
+    }
+    .soc{
+        display: grid;
+      grid-template: "a a"50px
+                       "b c"50px;
+    grid-gap: 10px;
+    grid-row-gap: 15px;
+   
+    margin: auto;
+    margin-top: 2%;
+    
+    
+    }
+    .soc>:nth-child(1){
+        grid-area: a;
+        width: 100%;
+        
+    }
+    .soc>:nth-child(2){
+        grid-area: b;
+        width: 50%;
+        margin-left: 3% ;
+        
+    }
+    
+    .soc>:nth-child(3){
+        grid-area: c;
+        width: 50%;
+        margin-right: 4%;
+    }
+    .input{
+        display: grid;
+       /* border: 2px solid red;*/
+    }
+    .error-box::-webkit-input-placeholder { 
+     
+     font-size: medium;
+     text-align: center;
+    }
+    
+.form-body button{
+background-color: #42a2a2;
+color: whitesmoke;
+border: none;
+border-radius: 5px;
+width: 80%;
+}
+.heading{
+    width: 70%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+.heading >div > h1{
+    margin-left: 5%;
+    background: transparent;
+    vertical-align: top;
+}
+.im img{
+    background: transparent;
+    width: 95%;
+    /*border: tomato solid;*/
+    margin-top: 15%;
+    height: 20%;
+    
+}
+.termsAndConditions{
+    opacity: 0.5;
+}
+.im{
+    
+    margin-left:4% ;
+}
+
+
 </style>
+
+</head>
 <body>
     <header>
           <div class="mainhead">
            <div class="mainheadrow">
-           <div>
+           <div >
             <img src="https://images.bewakoof.com/logos/bewakoof-logo-og.png" alt="">
             </div>
   
@@ -163,40 +278,64 @@ span{
     <div id="box">
         <div class="b1">
             
-            <h2>Welcome to the world of Bewakoof!</h2>
-            <img  src="https://images.bewakoof.com/web/group-19-1617704502.png" alt=""/>
+            <div class="heading">
+                <div>
+                <h1>Welcome to the world of Bewakoof!</h1></div>
+               </div> 
+               <div class="im">
+                <img  src="https://images.bewakoof.com/web/group-19-1617704502.png" alt=""/>
+               </div>
+               
         </div>
 
 
         <div class="b2">
-            <h1>Log in / Sign up</h1>
-            <p class="login-text">for Latest trends, exciting offers and everything Bewakoof!</p>
+            <div>
+               <h1>Log in / Sign up</h1><br/><br/> 
+                 <p class="login-text">for Latest trends, exciting offers and everything Bewakoof!</p>
+            </div>
+            <br/><br/>
+           
+           
             <div class="form-body">
                 <form name="loginForm" novalidate="" autocomplete="off">
-                <label for="mobile_number">+91</label>
-                <input class="error-box" id="mobile_number" type="tel" name="username" placeholder="Enter Mobile Number" maxlength="10" value="">
-                    <div class="msgs">
-                        <p class="error">Mobile Number is required</p>
-                    </div>
+                <div>
+                <input class="error-box" id="mobile_number" type="tel" name="username" placeholder="+91 -Enter Mobile Number" maxlength="10" value="">
+            </div>  <br/><br/>
                     </form>
-                </div>
+                   <button id="" type="submit" class="">Continue</button>  
+                </div><br/><br/>
             
-               <button id="" type="submit" class="">Continue</button>
-                </form>
+              
+            
                <div class="">
                 
-                 <span class="">OR</span>
+                 <span class="">OR</span><br/>
                 
-                   <div class="">
-                    <a href="">
-                        <button id="web_email_login"> <img src="https://images.bewakoof.com/web/carbon-email-1620039620.png"> CONTINUE WITH EMAIL</button>
+                   <div class="input">
+                        <div class="soc">
+                        <div>  
+                            <a href="bewkoofsignin.html">
+                        <button id="web_email_login"> <img src="https://images.bewakoof.com/web/carbon-email-1620039620.png">CONTINUE WITH EMAIL</button>
                     </a>
-                    <div class="soc">
-                        <button id="web_google_login"><img src="https://images.bewakoof.com/web/group-3-2x-1558356035.png"> Google</button>
-                        <button id="web_facebook_login" style="margin-left: 8px;">
+                  </div>
+                        <div> <button id="web_google_login"><img src="https://images.bewakoof.com/web/group-3-2x-1558356035.png"> Google</button></div>
+                        <div>
+                            <button id="web_facebook_login" style="margin-left: 8px;">
                             <img src="https://images.bewakoof.com/web/bi-facebook2x-1620886445.png"> Facebook</button>
-                            <p class="termsAndConditions">By creating an account or logging in, you agree with Bewakoof’s Terms and Conditions and Privacy Policy.</p>
-                    </div>
+                        </div>
+                            <br/><br/>
+                            </div>
+
+                   </div>
+                       
+                   
+                            <div>
+                                <p ><a href="bewkoofsignup.html"><span style="color: red">If New user Signup</span></a></p>
+                              <p class="termsAndConditions">By creating an account or logging in, you agree with Bewakoof’s<span style="color: #42a2a2;"> Terms and Conditions </span>and<span style="color: #42a2a2;"> Privacy Policy.</span></p>   
+                            </div>
+                           
+                    
                 </div>
             </div>
         </div>

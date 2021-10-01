@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Signup</title>
 </head>
 <style>
     .mainhead {
@@ -215,7 +215,7 @@ h2{
 
     <div id="container">
         <div>
-        <h2> Log in to your account</h2>
+        <h2> Signup your account</h2>
         </div>
         <div>
     <form onsubmit="signup(event)" id="myForm">
@@ -254,24 +254,21 @@ h2{
         let Email =email.value;
         let password= pass.value;
 
-        let all_users = JSON.parse(localStorage.getItem("users"));
-
-        var count = 0;
-    all_users.forEach(function(user){
-
-        if(Email ===user.Email && password ===user.password){
-
-            alert("logged in succesfully");
-            count++
-            window.location.href="home.html"
+        if(localStorage.getItem("users")===null){
+            localStorage.setItem("users", JSON.stringify([]))
         }
-        
-    })
-    if(count==0){
-    alert("Invalid Credentials")
-    }
 
-    
+        let user={
+            
+            Email,
+            password,
+        };
+
+        let arr= JSON.parse(localStorage.getItem("users"));
+
+        arr.push(user);
+
+        localStorage.setItem("users",JSON.stringify(arr));
 
     }
 </script>

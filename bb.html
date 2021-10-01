@@ -78,11 +78,7 @@ display: flex;
     background-color: #fff4c4;
     border: 2px solid red;
 }
-.b1 img{
-    width: 100%;
-    
-    
-}
+
 .b1>:nth-child(1){
     height: 100px;
 }
@@ -120,10 +116,10 @@ span{
 #box{
     display: grid;
     grid-template-columns: 48% 48%;
-    grid-gap:1%;
+   
     justify-content: center;
     border: 2px solid red;
-    height: 700px;
+    
 
 }
 #box>:nth-child(1){
@@ -135,9 +131,14 @@ span{
     border: 2px solid red;
     
 }
+.b2> div:nth-child(1){
+    margin-bottom: 3%;
+}
 #web_email_login{
     justify-content: center;
     align-items: center;
+    text-align: center;
+    width: 100%;
 }
 h1+p{
 color: gray;
@@ -157,24 +158,39 @@ input{
         display: grid;
       grid-template: "a a"50px
                        "b c"50px;
-    grid-gap: 5px;
-    width: 80%;
+    grid-gap: 10px;
+    grid-row-gap: 15px;
+   
     margin: auto;
+    margin-top: 2%;
+    
     
     }
     .soc>:nth-child(1){
         grid-area: a;
+        width: 100%;
+        
     }
     .soc>:nth-child(2){
         grid-area: b;
+        width: 50%;
+        margin-left: 3% ;
+        
     }
     
     .soc>:nth-child(3){
         grid-area: c;
+        width: 50%;
+        margin-right: 4%;
     }
     .input{
         display: grid;
         border: 2px solid red;
+    }
+    ::-webkit-input-placeholder { 
+     
+     font-size: medium;
+     text-align: center;
     }
     
 .form-body button{
@@ -182,11 +198,33 @@ background-color: #42a2a2;
 color: whitesmoke;
 border: none;
 border-radius: 5px;
+width: 80%;
 }
 .heading{
-    width: 400px;
-    height: 200px;
+    width: 70%;
+    height: ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
 }
+.heading >div > h1{
+    margin-left: 5%;
+    background: transparent;
+    vertical-align: top;
+}
+.im img{
+    background: transparent;
+    width: 95%;
+    border: tomato solid;
+    margin-top: 20%;
+    
+}
+.termsAndConditions{
+    opacity: 0.5;
+}
+
 
 </style>
 
@@ -195,7 +233,7 @@ border-radius: 5px;
     <header>
           <div class="mainhead">
            <div class="mainheadrow">
-           <div>
+           <div >
             <img src="https://images.bewakoof.com/logos/bewakoof-logo-og.png" alt="">
             </div>
   
@@ -233,34 +271,38 @@ border-radius: 5px;
     <div id="box">
         <div class="b1">
             
-            <div class="heading"><h1>Welcome to the world of Bewakoof!</h1></div>
-            <img  src="https://images.bewakoof.com/web/group-19-1617704502.png" alt=""/>
+            <div class="heading">
+                <div>
+                <h1>Welcome to the world of Bewakoof!</h1></div>
+               </div> 
+               <div class="im">
+                <img  src="https://images.bewakoof.com/web/group-19-1617704502.png" alt=""/>
+               </div>
+               
         </div>
 
 
         <div class="b2">
             <div>
-               <h1>Log in / Sign up</h1> 
+               <h1>Log in / Sign up</h1><br/><br/> 
                  <p class="login-text">for Latest trends, exciting offers and everything Bewakoof!</p>
             </div>
            
            
             <div class="form-body">
                 <form name="loginForm" novalidate="" autocomplete="off">
-                <label for="mobile_number">+91</label>
-                <input class="error-box" id="mobile_number" type="tel" name="username" placeholder="Enter Mobile Number" maxlength="10" value="">
-                    <div class="msgs">
-                        <p class="error">Mobile Number is required</p>
-                    </div>
+                <div>
+                <input class="error-box" id="mobile_number" type="tel" name="username" placeholder="+91 -Enter Mobile Number" maxlength="10" value="">
+            </div>  <br/><br/>
                     </form>
                    <button id="" type="submit" class="">Continue</button>  
-                </div>
+                </div><br/><br/>
             
               
             
                <div class="">
                 
-                 <span class="">OR</span>
+                 <span class="">OR</span><br/>
                 
                    <div class="input">
                         <div class="soc">
@@ -271,7 +313,7 @@ border-radius: 5px;
                         <div> <button id="web_google_login"><img src="https://images.bewakoof.com/web/group-3-2x-1558356035.png"> Google</button></div>
                         <div><button id="web_facebook_login" style="margin-left: 8px;">
                             <img src="https://images.bewakoof.com/web/bi-facebook2x-1620886445.png"> Facebook</button></div>
-                        
+                            <br/><br/>
                        
                         
                             </div>
@@ -279,7 +321,7 @@ border-radius: 5px;
                        
                    
                             <div>
-                              <p class="termsAndConditions">By creating an account or logging in, you agree with Bewakoof’s Terms and Conditions and Privacy Policy.</p>   
+                              <p class="termsAndConditions">By creating an account or logging in, you agree with Bewakoof’s<span style="color: #42a2a2;"> Terms and Conditions </span>and<span style="color: #42a2a2;"> Privacy Policy.</span></p>   
                             </div>
                            
                     
