@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;1,200;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+              .mainhead {
+          width: 100%;
+          background: #fff;
+          height: 52px;
+          line-height: 52px;
+          border-bottom: 1px solid rgba(0,0,0,.2);
+          position: relative;
+      }
+      .mainheadrow{
+          max-width: 1170px;
+          margin: 0 auto;
+          /* border: 1px solid red; */
+          display: flex;
+      }
+      .mainheadrow>div:nth-child(1){
+      /* border: 1px solid red; */
+      width: 16%;
+
+      }
+      .mainheadrow>div:nth-child(1) img{
+             height: 20px;
+          vertical-align: middle;
+          margin-bottom: 5px;
+
+
+      }
+      div>button{
+          border: hidden;
+          border-radius: 3px;
+      }
+
+
+      .mainheadrow>div:nth-child(2){
+      /* border: 1px solid red; */
+      width: 30%;
+      margin-left: 100px;
+
+      }
+      .mainheadrow>div:nth-child(3){
+      /* border: 1px solid red; */
+      width: 25%;
+      display: flex;
+
+
+      }
+      .mainheadrow>div:nth-child(4){
+      /* border: 1px solid red; */
+      width: 20%;
+      display: flex;
+
+
+      }
+      .mainheadrow>div:nth-child(3)>form{
+          width: 100%;
+          height: 50px;
+          text-align: left;
+          display: flex;
+
+      }
+      .mainheadrow>div:nth-child(3) input{
+         height: 80%;
+         width: 100%;
+         background: #eaeaea;
+         border: none;
+         border-radius: 7px;
+         margin-top: 2px;
+      }
+      .icon{
+          content: "\E90E"
+      }
+      a>i{
+          font-size: 22px;
+          margin-left: 20px;
+          color: rgb(43, 42, 42);
+      }
+      a{
+          font-size: 15px;
+          margin-left: 5px;
+          color: rgb(58, 55, 55);
+          text-decoration: none;
+      }
+      .fa, .fas {
+          margin-top: 15px;
+          margin-right: 10px;
+
+      }
+      span{
+          font-size: 15px;
+          margin-right: 20px;
+          margin-top: 3px;
+          font-family: montserrat,sans-serif;
+          color: black;
+
+      }
+
+      .fas, .fa-grip-lines-vertical{
+          margin-top: 10px;
+      }
+       .fa-search{
+          margin-top: 15px;
+      }
+      .line1{
+          width: 100%;
+          height: 50px;
+          /* border: 1px solid red; */
+
+      }
+      .line1 h5{
+          font-size: 14px;
+           font-family: montserrat,sans-serif;
+           font-weight: 400;
+           color: gray;
+      }
+      .container{
+          display: grid;
+          grid-template-columns: 48% 48%;
+          grid-template-rows: 100%;
+          grid-gap: 1%;
+          width: 90%;
+          justify-content: space-between;
+          height: 600px;
+          /* border: 1px solid red; */
+          margin: auto;
+      }
+      .box1{
+          /* display: grid; */
+          height: 100%;
+          /* border: 2px solid green; */
+
+
+      }
+      .box1 img{
+          max-width: 100%;
+          height: 100%;
+
+
+      }
+      .box2{
+          display: grid;
+          grid-template-rows: 39% 20% 33%;
+          grid-gap: 1%;
+          /* border: 2px solid green; */
+      }
+
+      /* .box2 div{
+          /* border: 2px solid red; */
+      /* } */
+      .brandName{
+          font-size: 14px;
+          color: #596cff;
+          font-family: montserrat,sans-serif;
+           font-weight: 600;
+           cursor: pointer;
+           letter-spacing: 1px;
+
+
+      }
+      .productName{
+          font-size: 14px;
+
+          font-family: montserrat,sans-serif;
+           font-weight: 500;
+           cursor: pointer;
+           color: rgb(113, 125, 138) ;
+
+
+      }
+      .rupee_icon{
+          font-size: 40px;
+          font-weight: 400;
+
+      }
+      #testNetProdPrice{
+          font-size: 40px;
+
+        font-weight: 400;
+      }
+      .discPrice{
+          display: block;
+          text-decoration: line-through;
+          font-family: montserrat,sans-serif;
+          color: slategray;
+      }
+      .inclusiveOfAllTaxes{
+          display: block;
+          font-size: 12px;
+          font-family: montserrat,sans-serif;
+          color: slategray;
+      }
+      .loyalty{
+          width: 100%;
+          height: 20px;
+          background-color: hsla(0,0%,92.9%,.6);
+          border-radius: 5px;
+      }
+      .loyalty a {
+          text-decoration: underline;
+      }
+      .sizes{
+          display: grid;
+          grid-template-columns: 13% 13% 13% 13% 13% ;
+          grid-template-rows: 100%;
+          grid-gap: 1%;
+          height: 60px;
+
+
+      }
+      .sizes div{
+          border: 2px solid rgba(185, 185, 185, 0.6);;
+      }
+      .sizes div:hover{
+          border: 2px solid #4acccd;
+      }
+      .sizes div h3{
+          font-weight: 400;
+          font-family: montserrat;
+          text-align: center;
+      }
+      .cart{
+          display: grid;
+          grid-template-columns: 14% 78%;
+          grid-gap: 1%;
+          height: 50px;
+      }
+      /* .cart{
+          /* border: 2px solid red; */
+      /* }  */
+      .cart button{
+          width: 100%;
+          height: 100%;
+          background-color: #42a2a2;
+          color: white;
+          font-weight: 400;
+          font-family: montserrat;
+          text-align: center;
+          font-size: 16px;
+          cursor: pointer;
+          border: none;
+          border-radius: 5px;
+      }
+      .cart>:nth-child(1){
+          border: 2px solid #42a2a2;
+          border-radius: 3px;
+      }
+      .cart i{
+          margin-top: 16px;
+          margin-right: 10px;
+          color: slategrey;
+      }
+      .far, .fa-heart{
+          text-align: center;
+      }
+      .product_description{
+          display: grid;
+          grid-template-columns: 45% 45%;
+          height: 400px;
+          width: 100%;
+          justify-content: center;
+          background-color: whitesmoke;
+      }
+      .product_description>div h4{
+          font-family: montserrat,sans-serif;
+          color: rgb(46, 46, 46);
+      }
+      .product_description>div p{
+          font-size: 14px;
+          font-family: montserrat,sans-serif;
+          color: slategrey;
+      }
+      .product_description>:nth-child(1){
+          display: grid;
+          grid-template-columns: 60%;
+
+      }
+
+      .product_description>:nth-child(2){
+          display: grid;
+          grid-template-columns: 60%;
+          justify-content: space-evenly;
+          border-left: 2px solid rgb(145, 145, 145);
+
+      }
+
+
+      .content2{
+          border: greenyellow;
+      }
+
+
+      /* .product_description>:nth-child(2)>div{
+      /* border: 2px solid green; */
+
+
+      /* } */ */
+    </style>
+    <script
+      src="https://kit.fontawesome.com/f1eae3bf56.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="mainhead">
+        <div class="mainheadrow">
+          <div>
+            <a href="home.html"> <img
+              src="https://images.bewakoof.com/logos/bewakoof-logo-og.png"
+              alt=""
+            /></a>
+           
+          </div>
+
+          <div>
+            <div style="display: inline-block">
+              <span>MEN</span>
+
+              <a href="women.html"> <span>WOMEN</span></a>
+            </div>
+          </div>
+          <div>
+            <form action="">
+              <i id="search" class="fas fa-search"></i>
+              <input
+                class="search2"
+                type="text"
+                placeholder="Search by product, category or collection"
+              />
+              <i class="icon"></i>
+            </form>
+          </div>
+          <div>
+            <span
+              ><a><i class="fas fa-grip-lines-vertical"></i></a
+            ></span>
+            <div>
+              <a href="login.html"> <span> Login</span> </a>
+            </div>
+
+            <span
+              ><a
+                href="
+            login.html"
+                ><i class="far fa-heart"></i></a
+            ></span>
+            <span
+              ><a href="cart.html"><i class="fas fa-shopping-bag"></i></a
+            ></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="line1">
+      <h5>
+        <a href="home.html">Home</a> / Grey Melange Contrast Binding Pocket Vest
+      </h5>
+    </div>
+    <div class="container">
+      <div class="box1">
+        <img
+          src="https://images.bewakoof.com/t540/round-neck-contrast-binding-pocket-vest-men-s-plain-round-neck-contrast-binding-pocket-vest-315166-1630049668-2.jpg"
+          alt=""
+        />
+      </div>
+      <div class="box2">
+        <div>
+          <h1 class="brandName">Bewakoof</h1>
+          <h1 class="productName">Grey Melange Contrast Binding Pocket Vest</h1>
+          <span class="rupee_icon">₹</span>
+          <span id="testNetProdPrice">299</span>
+          <span class="discPrice" id="testOriginalPrice">₹399</span>
+          <span class="inclusiveOfAllTaxes">Inclusive of taxes</span>
+
+          <div class="loyalty">
+            <span>₹265</span>
+            <span> For Tribe Members</span>
+            <a>know more</a>
+
+            <h3>Select Size</h3>
+          </div>
+        </div>
+        <div class="sizes">
+          <div onclick="sizeS()" ><h3>S</h3></div>
+          <div onclick="sizeM()"><h3>M</h3></div>
+          <div onclick="sizeL()"><h3>L</h3></div>
+          <div onclick="sizeXL()"><h3>XL</h3></div>
+          <div onclick="sizeXXL()"><h3>2XL</h3></div>
+        </div>
+        <div class="cart">
+          <div>
+            <a
+              href="
+                    login.html"
+              ><i class="far fa-heart"></i
+            ></a>
+          </div>
+          <div>
+           <button id="cart">Add TO Bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product_description">
+      <div>
+        <div class="content1">
+          <h4>PRODUCT DESCRIPTION</h4>
+          <p>
+            Look fashionable all day in this Grey Melange Men's Contrast Binding
+            Pocket Vest. Style this vest with a pair of jeans and sneakers for a
+            chic look.<br />Country of Origin : India
+          </p>
+          <h4>REGULAR FIT</h4>
+          <p>Fits just right-not too tight,not too loose.</p>
+          <h4>100% COTTON,SINGLE JERSY,180 <br />GSM</h4>
+          <p>
+            Single Jersey, 100% Cotton,Classic, lightweight jersey fabric
+            comprising 100% cotton.
+          </p>
+        </div>
+      </div>
+      <div class="content2">
+        <div>
+          <h4>15 DAY RETURNS & EXCHANGE</h4>
+          <p>
+            Easy returns upto 15 days of delivery. Exchange available on select
+            pincodes
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+
+
+
+
+
+
+  let btn = document.getElementById("cart")
+  console.log(btn)
+
+  if(localStorage.getItem("cart")===null){
+      localStorage.setItem("cart",JSON.stringify([]));
+    }
+
+  btn.onclick = function(){
+      addtocart()
+  }
+
+ var name ="Grey Melange Contrast Binding Pocket Vest";
+        var price=299;
+        var image="https://images.bewakoof.com/t320/round-neck-contrast-binding-pocket-vest-men-s-plain-round-neck-contrast-binding-pocket-vest-315166-1630049640-1.jpg";
+
+var size
+        function sizeS(){
+  size = "Size : S"
+  
+}
+function sizeM(){
+  size = "Size : M"
+}
+function sizeL(){
+  size = "Size : L"
+}
+function sizeXL(){
+  size = "Size : XL"
+}
+function sizeXXL(){
+  size = "Size : XXL"
+}
+
+
+ function addtocart(){     
+     
+        console.log("hello")
+        console.log(size)
+        if(size==undefined){
+          alert("selct size")
+        }
+        else{
+          let data = {
+          name:name,
+          price:price,
+          image:image,
+          size:size
+
+
+        }
+        console.log(data)
+
+        let arr = JSON.parse( localStorage.getItem("cart")) 
+        console.log(arr)
+        arr.push(data)
+        console.log(data)
+        localStorage.setItem("cart",JSON.stringify(arr))
+        }
+      
+
+ }
+ 
+
+
+  
+</script>
