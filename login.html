@@ -273,7 +273,7 @@ h2{
             <button type="button" id="forgot_password_link">Forgot Password?</button>
         </div>
         <div id="d1">
-        <button  id="login_password_submit" type="submit" >Login</button>
+        <a href="home.html"><button  id="login_password_submit" type="submit" >Login</button></a>
     </div>
     </form>
     </div>
@@ -301,7 +301,7 @@ h2{
         var count = 0;
     all_users.forEach(function(user){
 
-        if(Email ===user.Email && password ===user.password){
+        if(Email ===user.Email && password ===user.password && count==0){
 
             alert("logged in succesfully");
             count++
