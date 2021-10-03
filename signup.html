@@ -271,9 +271,9 @@ img {
             <button type="button" id="forgot_password_link">Forgot Password?</button>
         </div>
         <div id="d1">
-        
+       <button  id="login_password_submit" type="submit" >Sign up</button></a>  
     </div>
-    <a href="home.html"><button  id="login_password_submit" type="submit" >Sign up</button></a>
+   
     </form>
     </div>
     </div>
@@ -310,6 +310,7 @@ img {
         arr.push(user);
 
         localStorage.setItem("users",JSON.stringify(arr));
+        location.href = "home.html"
 
     }
 </script>
