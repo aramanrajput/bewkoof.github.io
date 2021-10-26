@@ -111,14 +111,10 @@ span{
     grid-template-columns: 50% 50%;
    
     justify-content: center;
-   /* border: 2px solid red;*/
-    
 
 }
 .b1{
-    background-image: linear-gradient(
-0deg,#fff4c4,#fff);
-    /*border: 2px solid red;*/
+    background-image: linear-gradient(0deg,#fff4c4,#fff);
 }
 
 .b1>:nth-child(1){
@@ -126,12 +122,10 @@ span{
 }
 #box>:nth-child(1){
     width:100%;
-    height: 850px;
+    
 }
 .b2{
     text-align: center;
-   /* border: 2px solid red;*/
-    
 }
 .b2> div:nth-child(1){
     margin-bottom: 3%;
@@ -187,7 +181,7 @@ input{
     }
     .input{
         display: grid;
-       /* border: 2px solid red;*/
+      
     }
     .error-box::-webkit-input-placeholder { 
      
@@ -219,7 +213,6 @@ width: 80%;
 .im img{
     background: transparent;
     width: 95%;
-    /*border: tomato solid;*/
     margin-top: 15%;
     height: 20%;
     
@@ -233,16 +226,21 @@ width: 80%;
 }
 .im img{
     
-    margin-top: 50%;
+    margin-top: 12%;
 }
 .mainheadrow img{
     width: 65%;
-    /* margin-bottom: 3px; */
     margin-top: 15px;
 }
 
 button img {
     width: 14%;
+}
+.signup{
+    color: red;
+}
+.terms , .privacy{
+    color: #42a2a2;
 }
 
 </style>
@@ -294,65 +292,58 @@ crossorigin="anonymous"
         <div class="b1">
             
             <div class="heading">
-                <div>
-                <h1>Welcome to the world of Bewakoof!</h1></div>
-               </div> 
-               <div class="im">
+            <div>
+                <h1>Welcome to the world of Bewakoof!</h1>
+            </div>
+            </div> 
+            <div class="im">
                 <img  src="https://images.bewakoof.com/web/group-19-1617704502.png" alt=""/>
-               </div>
+            </div>
                
         </div>
 
 
         <div class="b2">
-            <div>
-               <h1>Log in / Sign up</h1><br/><br/> 
-                 <p class="login-text">for Latest trends, exciting offers and everything Bewakoof!</p>
-            </div>
-            <br/><br/>
-           
-           
-            <div class="form-body">
-                <form name="loginForm" novalidate="" autocomplete="off">
-                <div>
-                <input class="error-box" id="mobile_number" type="tel" name="username" placeholder="+91 -Enter Mobile Number" maxlength="10" value="">
-            </div>  <br/><br/>
-                    </form>
-                   <button id="" type="submit" class="">Continue</button>   
-                </div><br/><br/>
-            
-              
-            
-               <div class="">
-                
-                 <span class="">OR</span><br/>
-                
-                   <div class="input">
-                        <div class="soc">
-                        <div>  
-                            <a href="login.html">
-                        <button id="web_email_login" style="cursor: pointer;"> CONTINUE WITH EMAIL</button>
+        <div>
+            <h1>Log in / Sign up</h1><br/><br/> 
+            <p class="login-text">for Latest trends, exciting offers and everything Bewakoof!</p>
+        </div>
+        <br/><br/>
+                      
+        <div class="form-body">
+             
+        </div><br/><br/>
+                                      
+        <div >
+                            
+                <div class="input">
+                    <div class="soc">
+                    <div>  
+                    <a href="login.html">
+                    <button id="web_email_login" style="cursor: pointer;"> CONTINUE WITH EMAIL</button>
                     </a>
-                  </div>
-                        <div> <button id="web_google_login"><img src="https://images.bewakoof.com/web/group-3-2x-1558356035.png"> Google</button></div>
-                        <div>
-                            <button id="web_facebook_login" style="margin-left: 8px;">
-                            <img src="https://images.bewakoof.com/web/bi-facebook2x-1620886445.png"> Facebook</button>
-                        </div>
-                            <br/><br/>
-                            </div>
-
-                   </div>
+                </div>
+                 <div>
+                      <button id="web_google_login"><img src="https://images.bewakoof.com/web/group-3-2x-1558356035.png"> Google</button>
+                </div>
+                <div>
+                    <button id="web_facebook_login" style="margin-left: 8px;">
+                    <img src="https://images.bewakoof.com/web/bi-facebook2x-1620886445.png"> Facebook</button>
+                </div>
+                <br/><br/>
+                </div>
+                </div>
                        
                    
-                            <div>
-                                <p ><a href="signup.html"><span style="color: red">If New user Signup</span></a></p>
-                              <p class="termsAndConditions">By creating an account or logging in, you agree with Bewakoof’s<span style="color: #42a2a2;"> Terms and Conditions </span>and<span style="color: #42a2a2;"> Privacy Policy.</span></p>   
-                            </div>
+                <div>
+                <button ><a href="signup.html"><span class="signup" >If New user Signup</span></a></button>
+                <br/><br/><br/><br/>
+                <p class="termsAndConditions">By creating an account or logging in, you agree with Bewakoof’s<span class ="terms" > Terms and Conditions </span>and<span class="privacy" > Privacy Policy.</span></p>   
+                </div>
                            
                     
-                </div>
-            </div>
+        </div>
+        </div>
         </div>
     </div>
 </body>
