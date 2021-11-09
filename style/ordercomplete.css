@@ -1,0 +1,148 @@
+
+* {
+    color: black;
+    font-family: montserrat, sans-serif;
+}
+.mainhead {
+  width: 100%;
+  background: #fff;
+  height: 52px;
+  line-height: 52px;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  position: relative;
+}
+.mainheadrow{
+  max-width: 1170px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  display: flex;
+}
+.mainheadrow>div:nth-child(1){
+/* border: 1px solid red; */
+width: 16%;
+
+}
+.mainheadrow>div:nth-child(1) img{
+     height: 20px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+
+
+}
+div>button{
+  border: hidden;
+  border-radius: 3px;
+}
+
+
+.mainheadrow>div:nth-child(2){
+/* border: 1px solid red; */
+width: 30%;
+margin-left: 100px;
+
+}
+.mainheadrow>div:nth-child(3){
+/* border: 1px solid red; */
+width: 25%;
+display: flex;
+
+
+}
+.mainheadrow>div:nth-child(4){
+/* border: 1px solid red; */
+width: 20%;
+display: flex;
+
+
+}
+.mainheadrow>div:nth-child(3)>form{
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  display: flex;
+
+}
+.mainheadrow>div:nth-child(3) input{
+ height: 80%;
+ width: 100%;
+ background: #eaeaea;
+ border: none;
+ border-radius: 7px;
+ margin-top: 2px;
+}
+.icon{
+  content: "\E90E"
+}
+a>i{
+  font-size: 22px;
+  margin-left: 20px;
+  color: rgb(43, 42, 42);
+}
+a{
+  font-size: 15px;
+  margin-left: 5px;
+  color: rgb(58, 55, 55);
+  text-decoration: none;
+}
+.fa, .fas {
+  margin-top: 15px;
+  margin-right: 10px;
+
+}
+span{
+  font-size: 15px;
+  margin-right: 20px;
+  margin-top: 3px;
+  font-family: montserrat,sans-serif;
+  color: black;
+
+}
+
+.fas, .fa-grip-lines-vertical{
+  margin-top: 10px;
+}
+.fa-search{
+  margin-top: 15px;
+}
+
+#refer_earn {
+    position: relative;
+    margin-left: 40%;
+    margin-bottom: 5%;
+}
+
+h4 {
+    margin-top: -145px;
+    margin-left: 170px;
+    font-size: 19px;
+}
+
+p {
+    margin-top: -18px;
+    font-size: 15px;
+    margin-left: 170px;
+    letter-spacing: 0.6px;
+}
+
+.img_size {
+    width: 30px;
+    height: 30px;
+}
+
+button {
+    width: 300px; 
+    height: 40px; 
+    border-radius: 5px;
+    margin-top: 1%;
+    margin-left: 40%;
+    color: white;
+    background-color: rgb(66, 162, 162);
+    border: 1px solid rgb(66, 162, 162);
+    font-size: 16px;
+}
+.box{
+/* border: 2px solid red; */
+margin-top: 40px;
+}
+
+

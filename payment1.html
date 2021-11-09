@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        * {
+            color: black;
+            font-family: montserrat, sans-serif;
+        }
+
+        #mainheadrow{
+            height: 35px;
+            margin-top: 1%;
+            margin-left: 12%;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+
+        #mainheadrow  img {
+            width: 50%
+        }
+
+        #mainheadrow > :nth-child(2) {
+            margin-left: 60%;
+            margin-top: -2%;
+            font-weight: 100px;
+        }
+
+        h5 {
+            margin-top: -13%;
+            color: rgb(29, 28, 28);
+            letter-spacing: 0.5px;
+            font-weight: 400;
+            
+        }
+
+        h6 {
+            opacity: 0.5;
+            font-size: 10px;
+            letter-spacing: 0.6px;
+        }
+
+        #middle_box {
+            margin-top: 2.5%;
+            margin-left: 12%;
+        }
+
+    
+        #pay {
+            margin-left: 40%;
+        }
+
+        #lower_box {
+            margin-top: 2%;
+            margin-left: 12%;
+            display: flex;
+            border: 1px solid rgb(161, 157, 157);
+            width: 47%;
+            min-height: 550px;
+        }
+
+        #lower_box > div:nth-child(1) {
+            width: 50%;
+            background-color: rgb(240, 239, 239);
+            color: #000;
+            line-height: normal;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            
+        }
+
+        .inactive {
+            padding-top: 12px;
+            padding-bottom: 13px;
+            margin-left: 13px;
+        }
+
+        #lower_box > div:nth-child(1) > hr {
+            border: 0.1px solid #e0e0e0 ; 
+        }
+
+        #active {
+            background-color: white;
+            padding-top: 15px;
+            padding-bottom: 13px;
+            border-left: 6px solid #42a2a2;
+        }
+
+        p {
+        margin-top: -9px;
+        font-weight: 100;
+        font-size: 10px;
+        margin-left: 13px;
+        color: rgb(112, 112, 112);
+        letter-spacing: .2px;
+        padding-top: 2px;
+        }
+
+        #lower_right_box {
+            width: 78%;
+            margin-left: 30px;
+            border: 1px solid rgb(161, 157, 157);
+            padding: 20px;
+            margin-top: 12%;
+            border-radius: 5px;
+           
+        }
+
+        #lower_right_box > div:nth-child(1) {
+            margin-left: 10px;
+        }
+
+        #card_num {
+            display: inline-block;
+            position: relative;
+            margin-top: 20px;
+         }
+
+        #card_num > input {
+            width: 335px;
+            height: 35px;
+            border-radius: 5px;
+            letter-spacing: 0.8px;
+            border: 0.1px solid rgb(161, 157, 157);
+        }
+
+        #card_name > input {
+            width: 335px;
+            height: 35px;
+            border-radius: 5px;
+            letter-spacing: 0.8px;
+            margin-top: 20px;
+            border: 0.1px solid rgb(161, 157, 157);
+        }
+
+        #card_expiry_cvv {
+            display: inline-block;
+        }
+
+        #card_expiry_cvv > input {
+            width: 158px;
+            height: 35px;
+            border-radius: 5px;
+            letter-spacing: 0.5px;
+            margin-top: 20px;
+            border: 0.1px solid rgb(161, 157, 157);
+        }
+
+        #card_check_box {
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        #card_check_box > label {
+            font-size: 10px;
+           text-align: top;
+
+        }
+
+        #payment {
+            margin-left: 10px;
+            width: 330px;
+            height: 50px;
+            color: white;
+            background-color: rgb(212, 203, 203);
+            font-size: 20px;
+            border: 0.1px solid rgb(212, 203, 203); 
+            border-radius: 5px;
+            
+        }
+
+
+
+
+        
+
+        
+    </style>
+</head>
+
+
+<body>
+    <div>
+        <div id="mainheadrow">
+            <div>
+              <a href="home.html"><img src="https://images.bewakoof.com/logos/bewakoof-logo-og.png" alt=""></a> 
+            </div>
+
+            <div>
+                <h6>Signed as</h6>
+                <h5>sabhishek647@gmail.com</h5>
+            </div>
+         </div>
+
+         <hr>
+         
+    
+         <div id="middle_box">
+            <span> <strong> Payment </strong> </span>
+           <strong><span id="pay">  pay </span></strong> 
+        </div>
+
+
+        <div id="lower_box" >
+            <div id="lower_box_left">
+                <div id="active">&nbsp; DEBIT/CREDIT CARD </div>
+                <hr>
+                <div class="inactive"> WALLET </div>
+                <hr>
+                <div class="inactive"> UPI </div>
+                <hr>
+                <div class="inactive"> NET BANKING </div>
+                <hr>
+                <div class="inactive"> CASH ON DELIVERY </div>
+                <p>Use online payment for safety and to avail </br> attractive cashback offers.</p>
+                <hr>
+            </div>
+
+
+            <div>
+                <div id="lower_right_box">
+                <div>
+                    <img  width="20px" src="https://images.bewakoof.com/web/Add-card-icon-1600332484.png
+                    " alt="">
+                    <span style="margin-left: 13px; font-size: 12px; text-align: center; position: relative; ">Add New Card</span>
+                </div>
+
+                <div>
+                    <div id="card_num">
+                        <input type="number " autocomplete="new-password" name="card_no" placeholder="XXXX XXXX XXXX XXXX">
+                        <!-- <img style="width: 24px; height: 17px;" src="https://images.bewakoof.com/web/credit-card-1600689323.png" alt=""> -->
+                    </div>
+                    
+                    <div id="card_name">
+                        <input type="text" name="card_name" placeholder="Name On Card">
+                    </div>
+
+                    <div id="card_expiry_cvv">
+                        <input type="date" name="card_expiry" placeholder="Expiry(MM/YY)">
+                        <input style="margin-left: 10px;" type="password" name="card_CVV" placeholder="CVV">
+                    </div>
+
+                    <div id="card_check_box">
+                        <input type="checkbox" name="card_check">
+                        <label for="card_check"> <strong> Securely save this card for faster payments. </strong> </label>
+                    </div>
+                </div>
+
+                <div style="font-size: 10px; text-align: justify; opacity: 0.7; margin-top: 8px; margin-bottom: 25px; letter-spacing: 0.7px ">
+                    This transaction you make is totally secure. We don't save </br> your CVV number.
+                </div>
+
+                <div>
+                     <a href="ordercomplete.html"> <button id="payment" onclick="pay_now()">PAY NOW</button></a>
+                </div>
+
+
+            </div>
+        
+        </div>
+
+        </div>
+    
+
+
+    </div>
+</body>
+</html>
+
+
+<script>
+    function pay_now() {
+        alert ("Thank you so much for placing the order with us!!!")
+    }
+   let payment = JSON.parse(localStorage.getItem("total"))
+   console.log(payment[0])
+   let message = document.getElementById("pay")
+ 
+   message.textContent="₹" +payment[payment.length-1]
+
+
+   
+
+</script>

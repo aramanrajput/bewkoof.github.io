@@ -374,11 +374,12 @@ span{
             </div>
             <div class="sizes">
                 
-                <div onclick="sizeS()" ><h3>S</h3></div>
-                <div onclick="sizeM()"><h3>M</h3></div>
-                <div onclick="sizeL()"><h3>L</h3></div>
-                <div onclick="sizeXL()"><h3>XL</h3></div>
-                <div onclick="sizeXXL()"><h3>2XL</h3></div>
+                <div id="s1" onclick="sizeS()"><h3>S</h3></div>
+                <div id="s2" onclick="sizeM()"><h3>M</h3></div>
+                <div id="s3" onclick="sizeL()"><h3>L</h3></div>
+                <div id="s4" onclick="sizeXL()"><h3>XL</h3></div>
+                <div id="s5" onclick="sizeXXL()"><h3>2XL</h3></div>
+
 
             </div>
             <div class="cart">
@@ -437,23 +438,61 @@ span{
   
   
 var size
-        function sizeS(){
+function sizeS(){
   size = "Size : S"
+document.getElementById("s1").style.border="2px solid turquoise"
+document.getElementById("s2").style.border="2px solid rgba(185, 185, 185, 0.6) "
+document.getElementById("s3").style.border="2px solid rgba(185, 185, 185, 0.6)"
+document.getElementById("s4").style.border="2px solid rgba(185, 185, 185, 0.6)"
+document.getElementById("s5").style.border="2px solid rgba(185, 185, 185, 0.6)"
+
   
 }
 function sizeM(){
   size = "Size : M"
+  document.getElementById("s1").style.border="2px solid rgba(185, 185, 185, 0.6)"
+
+document.getElementById("s2").style.border="2px solid turquoise "
+document.getElementById("s3").style.border="2px solid rgba(185, 185, 185, 0.6)"
+document.getElementById("s4").style.border="2px solid rgba(185, 185, 185, 0.6)"
+document.getElementById("s5").style.border="2px solid rgba(185, 185, 185, 0.6)"
+
+
 }
 function sizeL(){
   size = "Size : L"
+  document.getElementById("s3").style.border="2px solid turquoise"
+  document.getElementById("s1").style.border="2px solid rgba(185, 185, 185, 0.6)"
+
+document.getElementById("s2").style.border="2px solid rgba(185, 185, 185, 0.6) "
+
+document.getElementById("s4").style.border="2px solid rgba(185, 185, 185, 0.6)"
+document.getElementById("s5").style.border="2px solid rgba(185, 185, 185, 0.6)"
+
 }
 function sizeXL(){
   size = "Size : XL"
+  document.getElementById("s4").style.border="2px solid turquoise"
+  document.getElementById("s3").style.border="2px solid rgba(185, 185, 185, 0.6)"
+  document.getElementById("s1").style.border="2px solid rgba(185, 185, 185, 0.6)"
+
+document.getElementById("s2").style.border="2px solid rgba(185, 185, 185, 0.6) "
+
+
+document.getElementById("s5").style.border="2px solid rgba(185, 185, 185, 0.6)"
 }
 function sizeXXL(){
   size = "Size : XXL"
+
+  document.getElementById("s5").style.border="2px solid turquoise"
+  document.getElementById("s4").style.border="2px solid rgba(185, 185, 185, 0.6)"
+  document.getElementById("s3").style.border="2px solid rgba(185, 185, 185, 0.6)"
+  document.getElementById("s1").style.border="2px solid rgba(185, 185, 185, 0.6)"
+
+document.getElementById("s2").style.border="2px solid rgba(185, 185, 185, 0.6) "
+
+
 }
-    
   
    function addtocart(){     
        
