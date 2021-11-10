@@ -51,7 +51,7 @@
               ><a><i class="fas fa-grip-lines-vertical"></i></a
             ></span>
             <div>
-              <a href="login.html"> <span> Login</span> </a>
+              <a href="login.html"> <span id="tag"> Login</span> </a>
             </div>
 
             <span
@@ -254,6 +254,9 @@ function makedelete(e){
   }
 }
 
-
+let users = JSON.parse(localStorage.getItem("users")) 
+ let name=(users[users.length-1].Name)
+  tag.innerHTML=name
+  console.log(name)
 
 </script>
