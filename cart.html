@@ -215,7 +215,7 @@ if(coupon.value=="NEW100"&&counter<1){
 counter++
 subtotal.textContent = output-100
 t3.textContent = 100
-//  var arr = JSON.parse(localStorage.getItem("total"))
+ var arr = JSON.parse(localStorage.getItem("total"))
  arr.push(output-100)
  var arr1 =JSON.parse(localStorage.getItem("discount"))
  arr1.push(100)
@@ -252,11 +252,10 @@ function makedelete(e){
   if(count==0){
     total.textContent="0"
   }
-}
 
 let users = JSON.parse(localStorage.getItem("users")) 
  let name=(users[users.length-1].Name)
   tag.innerHTML=name
   console.log(name)
-
+}
 </script>
