@@ -38,7 +38,7 @@ we as a team of three members built the clone of bewakoof.com in 6 days.While bu
 
  <li>Arman Singh	  https://github.com/aramanrajput</li>
  <li> Abhishek Singh  https://github.com/sinab06</li>
- <li>	 https://github.com/sanjaykashyap80</li>
+ <li>	Dnyaneshwar Magar https://github.com/dnyaneshwarmagar</li>
 
 </ul>
 
