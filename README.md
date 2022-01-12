@@ -33,6 +33,19 @@ we as a team of three members built the clone of bewakoof.com in 6 days.While bu
 
 </ul>
 
+## Created Pages 
+<ul>
+  <li>Landing Page</li>
+  <li>Product Display Page</li>
+ 
+  <li>Order Details Page</li>
+  <li>Checkout Page</li>
+  <li>Sign in</li>
+  <li>Payment Page</li>
+  <li>Dashboard Page</li>
+  <li>Greating Page</li>
+</ul>
+
 ## Team Members 
 <ul>
 
