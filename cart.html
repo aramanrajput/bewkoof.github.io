@@ -9,7 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;1,200;1,400;1,500&display=swap" rel="stylesheet">
    
     <link rel="stylesheet" href="./style/cart.css">
-   
+   <style>
+     .filter{
+      border: 2px solid red;
+    width: 300px;
+    height: 40px;
+    margin-top: 17px;
+     }
+   </style>
   
     <script
       src="https://kit.fontawesome.com/f1eae3bf56.js"
@@ -67,6 +74,11 @@
         </div>
       </div>
     </header>
+
+    <div >
+<button onclick="priceSort()">sort by price</button>
+<button onclick="nameSort()">sort by name</button>
+    </div>
     <div class="main">
       <div id="container"></div>
       <div id="summary">
@@ -103,7 +115,7 @@
  let subtotal = document.getElementById("t4")
 
   
-  let cart = JSON.parse(localStorage.getItem("cart"));
+  let cart = JSON.parse(localStorage.getItem("cart"))||[];
   let container = document.getElementById("container");
   var output= 0;
   var count=0;
@@ -112,9 +124,9 @@ let coupon = document.getElementById("coupon")
 let submit = document.getElementById("submit")
 
 
+console.log(cart)
 
-  function showproducts() {
-    cart.forEach(function (product) {
+    cart.forEach(function (product,index) {
       count++
 
 
@@ -143,8 +155,11 @@ let submit = document.getElementById("submit")
       o3.textContent="S"
 
 let remove = document.createElement("button")
+
 remove.innerText = "delete"
-remove.addEventListener("click",makedelete)
+remove.addEventListener("click",function(){
+  makedelete(index)
+})
     
 
       let product_size = document.createElement("p");
@@ -170,8 +185,8 @@ remove.addEventListener("click",makedelete)
       container.append(div);
     });
     total.textContent = output
-  }
-  showproducts();
+  
+
 
 
 
@@ -242,20 +257,36 @@ size.textContent = "Size : "+select;
 }
 
 
-function makedelete(e){
- count--
-  e.target.parentNode.parentNode.remove();
-  let total = document.getElementById("t1")
-  let sub=(e.target.parentNode.querySelectorAll("p")[1].textContent)
-  console.log(sub)
-  total.textContent = output-Number(sub)
-  if(count==0){
-    total.textContent="0"
-  }
+function makedelete(i){
+  console.log(i)
+  let cart_arr=JSON.parse(localStorage.getItem("cart"))
+ cart_arr.splice(i,1)
+ console.log(cart_arr)
+ localStorage.setItem("cart",JSON.stringify(cart_arr))
+ location.reload()
 
-let users = JSON.parse(localStorage.getItem("users")) 
- let name=(users[users.length-1].Name)
-  tag.innerHTML=name
-  console.log(name)
 }
+function priceSort(){
+  let price_cart = JSON.parse(localStorage.getItem("cart"))
+  console.log(price_cart)
+ let sort_price=price_cart.sort(function(a,b){
+  return (a.price-b.price)
+ })
+ localStorage.setItem('cart',JSON.stringify(sort_price))
+location.reload()
+
+}
+function nameSort(){
+  let name_cart = JSON.parse(localStorage.getItem("cart"))
+
+ let sort_name=name_cart.sort(function(a,b){
+   if(a.name>b.name)return 1
+   if(a.name<b.name)return -1
+   return 0
+ })
+ localStorage.setItem('cart',JSON.stringify(sort_name))
+location.reload()
+}
+
+
 </script>
